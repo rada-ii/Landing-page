@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riot Energy Drinks</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="icon" href="images/favicon-16x16.png" />
+  </head>
+  <body>
+    <section class="sec">
+      <input type="checkbox" id="check" />
+      <header>
+        <a href="./index.html" class="logo"
+          ><img src="images/logo.png" alt="logo of the drink"
+        /></a>
+        <nav class="navigation">
+          <a href="#">About us</a>
+          <a href="#" class="find">Shop</a>
+          <a href="#" class="find">Find us</a>
+        </nav>
+        <label for="check">
+          <i class="fas fa-bars menu-btn"></i>
+          <i class="fas fa-times close-btn"></i>
+        </label>
+      </header>
+      <div class="content">
+        <div class="info">
+          <h1>100% PLANT<br />POWERED <span>ENERGY DRINK</span></h1>
+          <p>
+            Real energy from real ingredients - 100% Plant Powered | Organic |
+            Sweetened w/ real fruit | Zero added sugar | 160mg caffeine | 100mg
+            L-Theanine
+          </p>
+          <button href="#" class="info-btn">View Product</button>
+        </div>
+        <div class="imgBox">
+          <img
+            src="images/home.jpg"
+            alt=""
+            class="mn"
+            data-original-src="images/home.jpg"
+          />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="images/mango.png"
+            alt="citrus drink"
+            hover="images/RIOT-NEW-Crusher-Rollover-mango_550x-removebg-preview.png"
+            onclick="imageSlider('images/RIOT-HP-MANO_550x-removebg-preview.png');colorChange('#F99100')"
+          />
+        </li>
+        <li>
+          <img
+            src="images/citrus.png"
+            alt="citrus drink"
+            hover="images/RIOT-NEW-Crusher-Rollover-lime_550x-1.png"
+            onclick="imageSlider('images/RIOT-Web-Cans-CitrusLime-HP_550x-removebg-preview.png');
+            colorChange('#e4c900')"
+            onmousemove="imageHover('images/RIOT-NEW-Crusher-Rollover-lime_550x-1.png');
+           "
+          />
+        </li>
+        <li>
+          <img
+            src="images/pink.png"
+            alt="pink drink"
+            hover="images/RIOTwebfruitcrusherw_typeRollover_550x-removebg-preview.png"
+            onclick="imageSlider('images/RIOTEnergyStrawberrylemonade_550x-removebg-preview.png');colorChange('#D8609F')"
+          />
+        </li>
+      </ul>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

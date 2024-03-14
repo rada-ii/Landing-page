@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 1s;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #155324;
+  border-radius: 12px;
+  transition: all 1s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #81b302;
+}
+html {
+  font-size: 62.5%;
+}
+
+section {
+  background: #000;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30px 160px 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label {
+  display: none;
+}
+
+header .logo img {
+  position: relative;
+  max-width: 100px;
+}
+
+header .navigation a {
+  color: #fff;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 15px;
+  transition: 0.3s;
+}
+
+header .navigation a:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.navigation a:hover {
+  color: #155324;
+  transition: all 1s;
+}
+
+.content {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.content .info {
+  position: relative;
+  max-width: 60rem;
+  font-weight: 900;
+  margin-top: 2rem;
+}
+.content .info h1 {
+  color: #155324;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 5rem;
+  margin-bottom: 3rem;
+}
+
+.content .info h1 span {
+  color: #81b302;
+  font-size: 3.5rem;
+  background-color: #fff;
+}
+
+.content .info p {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+  color: #fff;
+}
+
+.content .info-btn {
+  /* display: block; */
+  width: 100%;
+  color: #fff;
+  background: #155324;
+  text-decoration: none;
+  border: 3px solid #155324;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  transition: 0.3s;
+  /* transition-property: background; */
+}
+
+.content .info-btn:hover {
+  color: #155324;
+  background: none;
+  border: 3px solid #155324;
+  /* margin-top: 5rem; */
+}
+.content .imgBox {
+  width: 65rem;
+  display: flex;
+  padding-right: 5rem;
+  justify-content: flex-end;
+}
+/* .content .imgBox img {
+  max-width: 160px;
+} */
+.mn {
+  max-width: 80%;
+}
+.thumb {
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  display: flex;
+}
+.thumb li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 2rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.thumb li:hover {
+  transform: translateY(-15px);
+}
+.thumb li img {
+  max-width: 4rem;
+}
+
+#check {
+  z-index: 3;
+  display: none;
+}
+
+@media (max-width: 1450px) {
+  .content .info {
+    max-width: 40rem;
+    font-size: 1.8rem;
+  }
+
+  .content .imgBox {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 1250px) {
+  .mn {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 960px) {
+  header .navigation {
+    display: none;
+  }
+
+  label {
+    display: block;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+    transition: 1s ease;
+  }
+
+  label:hover {
+    color: #fff;
+  }
+
+  label .close-btn {
+    display: none;
+  }
+
+  #check:checked ~ header .navigation {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #check:checked ~ header .navigation a {
+    font-weight: 700;
+    margin-right: 0;
+    margin-bottom: 5rem;
+    letter-spacing: 2px;
+  }
+
+  #check:checked ~ header label .close-btn {
+    z-index: 2;
+    position: fixed;
+    display: block;
+  }
+
+  #check:checked ~ header label .menu-btn {
+    display: none;
+  }
+
+  label .menu-btn {
+    position: absolute;
+  }
+  header {
+    padding: 3rem 6rem 0.5rem 2.5rem;
+  }
+  header .logo img {
+    position: absolute;
+    max-width: 7.5rem;
+    top: 35%;
+  }
+  section {
+    padding: 4rem;
+  }
+  .content .info h1 {
+    font-size: 4.5rem;
+    line-height: 5rem;
+  }
+
+  .content .info h1 span {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+
+  .content .info p {
+    font-size: 1.4rem;
+  }
+  .thumb li img {
+    max-width: 2.2rem;
+  }
+}
+@media (max-width: 835px) {
+  section {
+    padding-bottom: 14rem;
+  }
+  .content {
+    flex-direction: column;
+    margin-top: 8rem;
+  }
+  .content .info {
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+  }
+  .content .imgBox {
+    width: 100%;
+    display: flex;
+    padding-right: 0;
+    margin-top: 5rem;
+    justify-content: center;
+  }
+  .content .imgBox img {
+    max-width: 80rem;
+  }
+  .thumb li img {
+    max-width: 3rem;
+  }
+}
+@media (max-width: 560px) {
+  header {
+    padding: 3rem 6rem 3rem 4rem;
+  }
+
+  .content .info h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+
+  .content .info h1 span {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  .content .info p {
+    font-size: 1.4rem;
+  }
+  .content .imgBox img {
+    max-width: 100%;
+  }
+}
