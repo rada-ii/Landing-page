@@ -10,7 +10,7 @@ function imageSlider(anything) {
       this.src = "images/RIOTEnergyStrawberrylemonade_550x.png";
     };
   }
-  // Hover efekat za Citrus Lime
+  // Hover efekat for Citrus Lime
   else if (anything === "images/RIOT-Web-Cans-CitrusLime-HP_550x.png") {
     mainImage.onmouseover = function () {
       this.src = "images/RIOT-NEW-Crusher-Rollover-lime_550x.png";
@@ -19,7 +19,7 @@ function imageSlider(anything) {
       this.src = "images/RIOT-Web-Cans-CitrusLime-HP_550x.png";
     };
   }
-  // Hover  efekat za 'Mango'
+  // Hover  efekat for 'Mango'
   else if (anything === "images/RIOT-HP-MANO_550x.png") {
     mainImage.onmouseover = function () {
       this.src = "images/RIOT-NEW-Crusher-Rollover-mango_550x.png";
@@ -28,7 +28,7 @@ function imageSlider(anything) {
       this.src = "images/RIOT-HP-MANO_550x.png";
     };
   }
-  // Uklanja hover efekat za druge slike
+  // remove hover
   else {
     mainImage.onmouseover = null;
     mainImage.onmouseout = null;
