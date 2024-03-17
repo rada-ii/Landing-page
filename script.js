@@ -4,30 +4,43 @@ function imageSlider(anything) {
   // Set hover Strawberry
   if (anything === "images/RIOTEnergyStrawberrylemonade_550x.png") {
     mainImage.onmouseover = function () {
-      this.src = "images/RIOTwebfruitcrusherw_typeRollover_550x.png";
+      timeout = setTimeout(() => {
+        this.src = "images/RIOTwebfruitcrusherw_typeRollover_550x.png";
+      }, 300);
     };
     mainImage.onmouseout = function () {
-      this.src = "images/RIOTEnergyStrawberrylemonade_550x.png";
+      timeout = setTimeout(() => {
+        this.src = "images/RIOTEnergyStrawberrylemonade_550x.png";
+      }, 300);
     };
   }
-  // Hover efekat for Citrus Lime
+  // Hover effect for Citrus Lime
   else if (anything === "images/RIOT-Web-Cans-CitrusLime-HP_550x.png") {
     mainImage.onmouseover = function () {
-      this.src = "images/RIOT-NEW-Crusher-Rollover-lime_550x.png";
+      timeout = setTimeout(() => {
+        this.src = "images/RIOT-NEW-Crusher-Rollover-lime_550x.png";
+      }, 300);
     };
     mainImage.onmouseout = function () {
-      this.src = "images/RIOT-Web-Cans-CitrusLime-HP_550x.png";
+      timeout = setTimeout(() => {
+        this.src = "images/RIOT-Web-Cans-CitrusLime-HP_550x.png";
+      }, 300);
     };
   }
-  // Hover  efekat for 'Mango'
+  // Hover effect for 'Mango'
   else if (anything === "images/RIOT-HP-MANO_550x.png") {
     mainImage.onmouseover = function () {
-      this.src = "images/RIOT-NEW-Crusher-Rollover-mango_550x.png";
+      timeout = setTimeout(() => {
+        this.src = "images/RIOT-NEW-Crusher-Rollover-mango_550x.png";
+      }, 300);
     };
     mainImage.onmouseout = function () {
-      this.src = "images/RIOT-HP-MANO_550x.png";
+      timeout = setTimeout(() => {
+        this.src = "images/RIOT-HP-MANO_550x.png";
+      }, 300);
     };
   }
+
   // remove hover
   else {
     mainImage.onmouseover = null;
@@ -35,9 +48,9 @@ function imageSlider(anything) {
   }
 }
 
-function colorChange(color) {
+function colorChange(color1, color2) {
   const sec = document.querySelector(".sec");
-  sec.style.background = color;
-  const navMenu = document.querySelector(".navigation");
-  navMenu.style.background = color;
+  sec.style.background = `linear-gradient(90deg, ${color1} 0%, ${color2} 55%)`;
+  // const navMenu = document.querySelector(".navigation");
+  navMenu.style.background = `linear-gradient(90deg, ${color1} 0%, ${color2} 55%)`;
 }

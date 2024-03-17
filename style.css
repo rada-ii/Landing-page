@@ -3,16 +3,31 @@
   padding: 0;
   box-sizing: border-box;
   /* font-family: Arial, Helvetica, sans-serif; */
-  transition: all 1s;
+  transition: all 1.3s;
 }
 
-@font-face {
-  font-family: "Runboy"; /*Can be any text*/
-  src: local("Runboy"), url("./fonts/Runboy\ Free\ Trial.woff") format("woff");
+#mainImage {
+  transition: src 1.7s ease !important;
+}
+
+.sec {
+  transition: background 1.7s ease !important;
+}
+/* Define hover effects */
+.strawberry-hover.hovered {
+  src: url("images/RIOTwebfruitcrusherw_typeRollover_550x.png");
+}
+
+.lime-hover.hovered {
+  src: url("images/RIOT-NEW-Crusher-Rollover-lime_550x.png");
+}
+
+.mango-hover.hovered {
+  src: url("images/RIOT-NEW-Crusher-Rollover-mango_550x.png");
 }
 
 body {
-  font-family: "Runboy";
+  font-family: "Rajdhani", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -47,6 +62,10 @@ section {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
+}
+
+h1 {
+  font-weight: 700 !important;
 }
 
 header {
@@ -106,9 +125,9 @@ header .navigation a:not(:last-child) {
 
 .content .info h1 {
   color: #155324;
-  font-size: 3rem;
+  font-size: 5rem;
   text-transform: uppercase;
-  font-weight: 900;
+  /* font-weight: 900; */
   letter-spacing: 2px;
   line-height: 5rem;
   margin-bottom: 3rem;
@@ -116,7 +135,7 @@ header .navigation a:not(:last-child) {
 
 .content .info h1 span {
   color: #81b302;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   background-color: #fff;
 }
 
