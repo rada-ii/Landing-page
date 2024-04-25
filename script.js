@@ -6,12 +6,12 @@ function imageSlider(anything) {
     mainImage.onmouseover = function () {
       timeout = setTimeout(() => {
         this.src = "images/RIOTwebfruitcrusherw_typeRollover_550x.png";
-      }, 300);
+      }, 100);
     };
     mainImage.onmouseout = function () {
       timeout = setTimeout(() => {
         this.src = "images/RIOTEnergyStrawberrylemonade_550x.png";
-      }, 300);
+      }, 100);
     };
   }
   // Hover effect for Citrus Lime
@@ -19,12 +19,12 @@ function imageSlider(anything) {
     mainImage.onmouseover = function () {
       timeout = setTimeout(() => {
         this.src = "images/RIOT-NEW-Crusher-Rollover-lime_550x.png";
-      }, 300);
+      }, 100);
     };
     mainImage.onmouseout = function () {
       timeout = setTimeout(() => {
         this.src = "images/RIOT-Web-Cans-CitrusLime-HP_550x.png";
-      }, 300);
+      }, 100);
     };
   }
   // Hover effect for 'Mango'
@@ -32,12 +32,12 @@ function imageSlider(anything) {
     mainImage.onmouseover = function () {
       timeout = setTimeout(() => {
         this.src = "images/RIOT-NEW-Crusher-Rollover-mango_550x.png";
-      }, 300);
+      }, 100);
     };
     mainImage.onmouseout = function () {
       timeout = setTimeout(() => {
         this.src = "images/RIOT-HP-MANO_550x.png";
-      }, 300);
+      }, 100);
     };
   }
 
@@ -48,9 +48,23 @@ function imageSlider(anything) {
   }
 }
 
+// function colorChange(color1, color2) {
+//   const sec = document.querySelector(".sec");
+//   sec.style.background = `linear-gradient(90deg, ${color1} 0%, ${color2} 55%)`;
+//   // const navMenu = document.querySelector(".navigation");
+//   navMenu.style.background = `linear-gradient(90deg, ${color1} 0%, ${color2} 55%)`;
+// }
 function colorChange(color1, color2) {
   const sec = document.querySelector(".sec");
-  sec.style.background = `linear-gradient(90deg, ${color1} 0%, ${color2} 55%)`;
-  // const navMenu = document.querySelector(".navigation");
-  navMenu.style.background = `linear-gradient(90deg, ${color1} 0%, ${color2} 55%)`;
+  const width =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+
+  if (width > 960) {
+    // Apply gradient only if the viewport width is greater than 960px
+    sec.style.background = `linear-gradient(90deg, ${color1} 0%, ${color2} 55%)`;
+  } else {
+    sec.style.background = "#000"; // Ensure background is black on smaller devices
+  }
 }
