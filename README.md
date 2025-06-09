@@ -2,6 +2,11 @@
 
 A single-page website for "Riot Energy Drinks" with product switching and color changes.
 
+## 🚀 Live Demo
+
+<a href="https://landing-page-beta-dun.vercel.app/" target="_blank">Live Demo</a>
+
+
 ## What it does
 
 - Shows 3 different energy drink flavors
@@ -25,10 +30,6 @@ A single-page website for "Riot Energy Drinks" with product switching and color 
 **Hover effects:** Main image changes on hover (shows "crushed" version)  
 **Mobile menu:** Hamburger menu for smaller screens  
 **Responsive:** Works on desktop, tablet, mobile  
-
-## 🚀 Live Demo
-[https://landing-page-beta-dun.vercel.app/](https://landing-page-beta-dun.vercel.app/)
-
 
 ## JavaScript functions
 
